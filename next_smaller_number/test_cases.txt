@@ -1,0 +1,15 @@
+# Test Cases Format:
+# - Line 1: Input
+# - Line 2: Expected Answer
+# - Line 3: Blank line (separator)
+# Repeat for each test case
+
+8 4 6 2 3
+4 2 4 2 3
+
+1 2 3 4 5
+1 2 3 4 5
+
+10 1 1 6
+9 0 1 6
+
