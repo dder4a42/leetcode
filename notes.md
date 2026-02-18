@@ -57,5 +57,26 @@ $$
     你可以重复该过程任意次
 
 如果能从 A 开始构造出目标数组 target ，请你返回 True ，否则返回 False 。
+
+提示：
+
+    N == target.length
+    1 <= target.length <= 5 * 10^4
+    1 <= target[i] <= 10^9
 ```
 
+数组非负，则 x 递增。由于 `sum(target)` 大于数组中任意元素，则更新后 `x:=max(target)`，可逆向模拟该数组的构造过程，检查是否能还原为 `[1]*n`.
+
++ 使用 max-heap 维护数组最大值
++ 使用 partial-sum 变量维护剩余元素和：`new_p_sum = old_p_sum - old_max_element + new_max_element`
++ 检查退出条件
+
+检查是否全为一有不同方法，如所有元素非负且和为一，或所有元素非负且最大值为一。
+
++ 非负性：新元素为`max_ele - p_sum`，检查 `max_ele > p_sum` 且 `p_sum > 0`
++ 最大值：默认的 heapq 为 min-heap，则将 `(-x, idx)` 入堆，按字典序排列
+
+若某元素特别大，则可以将多次减法优化为 mod 运算，即将 `new_val = max_ele - p_sum` 变为 `new_val = max_ele % p_sum`。值得注意的是 mod 为 0 的情况：
+
++ 若 `p_sum` 为 1, 则返回 True
++ 若否，则说明会减到 0,返回 False

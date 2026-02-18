@@ -36,28 +36,31 @@ class Solution:
         
         target = ast.literal_eval(args[0])
 
-        left_sum = sum(target)
+        total_sum = sum(target)
         n = len(target)
-        heap = []
-        for i, x in enumerate(target):
-            heapq.heappush(heap, (-x, i))
+
+        if n == 1:
+            return True if target[0] == 1 else False
+
+        heap = [(-x, i) for i, x in enumerate(target)]
+        heapq.heapify(heap)
         
-        while left_sum > n:
+        while -heap[0][0] > 1:
             max_ele, idx = heapq.heappop(heap)
             max_ele = -max_ele
-            left_sum -= max_ele
 
-            if max_ele <= left_sum:
+            p_sum = total_sum - max_ele
+            if p_sum <= 0 or max_ele <= p_sum:
                 return False
-            if left_sum == 1:
+            if p_sum == 1:
                 return True
             
-            new_val = max_ele % left_sum
-            if new_val < 1:
+            new_val = max_ele % p_sum
+            if new_val == 0:
                 return False
 
             target[idx] = new_val
-            left_sum += new_val
+            total_sum = p_sum + new_val
             heapq.heappush(heap, (-new_val, idx))
             
         return True
