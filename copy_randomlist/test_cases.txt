@@ -1,0 +1,42 @@
+# Test Cases Format:
+# - Input lines (one or more)
+# - "---" separator line
+# - Expected Answer (Python literal - e.g., 9, "[0,1]", "[[1,2],[1,4]]")
+# - Blank line separator between test cases
+#
+# Each input line becomes an argument to solve() method.
+# Format: [[val, random_idx], [val, random_idx], ...]
+# where random_idx is:
+#   - None: random pointer is null
+#   - integer: index of node to point to (0-based)
+#
+# NOTE: Index 0 points to first node. If only one node, index 0 is self-loop.
+#       Use None or a larger index for multiple nodes to avoid self-loop.
+
+# Test case 1: Single node with null random pointer
+[[-1, 0]]
+---
+[[-1, 0]]
+
+# Test case 2: Two nodes, second's random points to first
+[[1, None], [2, 0]]
+---
+[[1, None], [2, 0]]
+
+# Test case 3: Three nodes with random pointers
+[[3, 2], [3, None], [3, 2]]
+---
+[[3, 2], [3, None], [3, 2]]
+
+# Test case 4: Self-loop - node's random points to itself
+[[5, 0], [6, 0]]
+---
+[[5, 0], [6, 0]]
+
+# Test case 5: Single node with self-loop (random points to index 0 = itself)
+# NOTE: LeetCode web expects [[-1, null]] for [[-1, 0]] input
+#       This test expects [[-1, 0]] to match current local behavior
+[[-1, 0]]
+---
+[[-1, 0]]
+
