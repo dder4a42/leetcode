@@ -2,3 +2,5 @@
 .ruff_cache
 .sisyphus
 .vscode
+
+__pycache__/
