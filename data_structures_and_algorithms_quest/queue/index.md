@@ -1,2 +1,20 @@
-1. 无法吃午餐的学生个数：直接模拟有点呆。注意到对于栈顶的每份餐点，都会遍历学生队列尝试吃掉，则实际上只需统计学生对餐点的需求，并不断检查餐点栈顶即可。
-2. 买票所需时间：直接模拟会超时，好一点的方法是对每个人的买票时间排序，让买票最少的人出队，累积“剩余人数 x 出队票数；更省事的方法是直接从左往右**完全**遍历，累积每个人贡献的耗时。
+# queue
+
+> INDEX_FORMAT_V1
+
+| slug | title | leetcode | solution | code | analysis_anchor |
+| --- | --- | --- | --- | --- | --- |
+| countStudents | Number of Students Unable to Eat Lunch | https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/ | - | ./countStudents/solution.py | countstudents |
+| timeRequiredToBuy | Time Needed to Buy Tickets | https://leetcode.com/problems/time-needed-to-buy-tickets/ | - | ./timeRequiredToBuy/solution.py | timerequiredtobuy |
+
+## 题目分析
+
+### countstudents
+直接模拟队列可做，但更简洁的是统计两类餐点需求数量，
+按栈顶餐点持续消费；当某类需求为 0 且栈顶仍是该类时结束。
+
+### timerequiredtobuy
+可由贡献法计算总时间：
+- 对于目标位置左侧和自身，最多贡献 `tickets[k]`；
+- 对于目标位置右侧，最多贡献 `tickets[k]-1`；
+线性累加即可。

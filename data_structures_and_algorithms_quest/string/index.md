@@ -1,6 +1,17 @@
-大概是理解 KMP 后，用一些结论简化问题。
-1. 重复的子字符串：判断一个字符串是否由于某个 pattenrn 循环拼接得到。
-    - 笨方法是找到下一个重复出现的字符，将间距作为候选周期，检查该周期是否成立
-    - 由 KMP 相关的一些结论，可以直接拼接自己，掐头去尾破坏平凡解，最后检查是否包含自身（为什么？）
-2. 旋转字符串：检查源字符串是否能通过循环左移得到目标字符串。
-    - 将字符串与自身拼接，并使用滑动窗口，则能检查所有循环左移的可能结果。
+# string
+
+> INDEX_FORMAT_V1
+
+| slug | title | leetcode | solution | code | analysis_anchor |
+| --- | --- | --- | --- | --- | --- |
+| repeatedSubstringPattern | Repeated Substring Pattern | https://leetcode.com/problems/repeated-substring-pattern/ | - | ./repeatedSubstringPattern/solution.py | repeatedsubstringpattern |
+
+## 题目分析
+
+### repeatedsubstringpattern
+利用字符串性质（或 KMP 结论）可快速判断：
+- 构造 `t = s + s`，去掉首尾字符后检查是否包含 `s`；
+- 若包含，说明 `s` 可由某个子串重复拼接得到。
+
+### 其他
+旋转字符串也可借助 `s + s` 覆盖所有循环位移结果，再做包含判断。

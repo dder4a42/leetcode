@@ -1,0 +1,10 @@
+[project]
+name = "leetcode-utils"
+version = "0.1.0"
+description = "LeetCode utility functions"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["utils*"]

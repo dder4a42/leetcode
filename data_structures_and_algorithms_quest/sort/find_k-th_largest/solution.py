@@ -3,13 +3,9 @@
 LeetCode Problem: PROBLEM_TITLE
 """
 
-import sys
-import ast
 from typing import List, Optional, Tuple, Any
-from pathlib import Path
 import random
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils import ListNode, TreeNode, auto_io, with_types, run_tests
 
 
@@ -22,9 +18,11 @@ class Solution:
         """
         n = len(nums)
         target_idx = n - k  # Convert kth largest to (n-k)th smallest
-        return self.quickselect(nums, 0, n-1, target_idx)
+        return self.quickselect(nums, 0, n - 1, target_idx)
 
-    def quickselect(self, nums: list[int], left: int, right: int, target_idx: int) -> int:
+    def quickselect(
+        self, nums: list[int], left: int, right: int, target_idx: int
+    ) -> int:
         """
         Three-way quickselect algorithm.
         Returns the element at position target_idx in sorted order.
@@ -57,12 +55,13 @@ class Solution:
         # nums[j:right+1] > pivot
 
         if target_idx < i:
-            return self.quickselect(nums, left, i-1, target_idx)
+            return self.quickselect(nums, left, i - 1, target_idx)
         elif target_idx >= j:
             return self.quickselect(nums, j, right, target_idx)
         else:
             # target_idx falls within pivot equal range
             return pivot
+
 
 def main():
     """Main entry point."""

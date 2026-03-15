@@ -3,12 +3,8 @@
 LeetCode Problem: PROBLEM_TITLE
 """
 
-import sys
-import ast
 from typing import List, Optional, Tuple, Any
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils import ListNode, TreeNode, auto_io, with_types, run_tests
 
 

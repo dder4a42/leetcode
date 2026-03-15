@@ -1,2 +1,12 @@
-1. 二进制求和：将两个二进制字符串求和，维护好 carry 进位即可
-2. 多次求和构造目标数组：尝试逆向数组的构造过程，检查是否能还原为全一数组。
+# simulation
+
+> INDEX_FORMAT_V1
+
+| slug | title | leetcode | solution | code | analysis_anchor |
+| --- | --- | --- | --- | --- | --- |
+| binary_add | Add Binary | https://leetcode.com/problems/add-binary/ | - | ./binary_add/solution.py | binary_add |
+
+## 题目分析
+
+### binary_add
+按位从低位到高位模拟二进制加法，维护 `carry` 进位即可。

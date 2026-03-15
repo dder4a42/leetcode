@@ -3,13 +3,9 @@
 LeetCode Problem: PROBLEM_TITLE
 """
 
-import sys
-import ast
 from typing import List, Optional, Tuple, Any
-from pathlib import Path
 import random
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils import ListNode, TreeNode, auto_io, with_types, run_tests
 
 
@@ -17,10 +13,10 @@ class Solution:
     @auto_io
     def solve(self, nums: List[int]) -> List[int]:
         n = len(nums)
-        self.Qs(nums, 0, n-1)
+        self.Qs(nums, 0, n - 1)
         return nums
 
-    def Qs(self, nums,left,right):
+    def Qs(self, nums, left, right):
         if left >= right:
             return  # Base case: subarray has 0 or 1 element
 
@@ -50,6 +46,7 @@ class Solution:
         # Recursively sort left and right regions
         self.Qs(nums, left, i - 1)
         self.Qs(nums, j, right)
+
 
 def main():
     """Main entry point."""
