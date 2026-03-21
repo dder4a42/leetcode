@@ -112,6 +112,20 @@
 | --- | --- | --- | --- |
 | [climbng_stairs_ii](dp/climbng_stairs_ii) | 待补充 | 待补充 | [solution.py](dp/climbng_stairs_ii/solution.py) |
 
+### robs
+- 目录说明：[index.md](dp/robs/index.md)
+
+| 题目目录 | LeetCode | 本地题解 | 实现代码 |
+| --- | --- | --- | --- |
+| [count_house_placements](dp/robs/count_house_placements) | [题目](https://leetcode.cn/problems/count-number-of-ways-to-place-houses/description/) | [分析](dp/robs/index.md#count_house_placements) | [solution.py](dp/robs/count_house_placements/solution.py) |
+| [cycle_rob](dp/robs/cycle_rob) | [题目](https://leetcode.cn/problems/house-robber-ii/) | [分析](dp/robs/index.md#cycle_rob) | [solution.py](dp/robs/cycle_rob/solution.py) |
+
+### prefix_sum
+
+| 题目目录 | LeetCode | 本地题解 | 实现代码 |
+| --- | --- | --- | --- |
+| [subarray_sum_equals_k](prefix_sum/subarray_sum_equals_k) | 待补充 | 待补充 | [solution.py](prefix_sum/subarray_sum_equals_k/solution.py) |
+
 ### simulation
 - 目录说明：[index.md](simulation/index.md)
 
@@ -210,6 +224,17 @@ leetcode/
 │       └── test_cases.txt
 ├── dp/
 │   └── climbng_stairs_ii/
+│       ├── solution.py
+│       └── test_cases.txt
+│   └── robs/
+│       ├── count_house_placements/
+│       │   ├── solution.py
+│       │   └── test_cases.txt
+│       └── cycle_rob/
+│           ├── solution.py
+│           └── test_cases.txt
+├── prefix_sum/
+│   └── subarray_sum_equals_k/
 │       ├── solution.py
 │       └── test_cases.txt
 ├── simulation/
