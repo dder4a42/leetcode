@@ -103,6 +103,7 @@
 
 | 题目目录 | LeetCode | 本地题解 | 实现代码 |
 | --- | --- | --- | --- |
+| [container_with_most_water](double_ptr/container_with_most_water) | [题目](https://leetcode.com/problems/container-with-most-water/) | [分析](double_ptr/index.md#container_with_most_water) | [solution.py](double_ptr/container_with_most_water/solution.py) |
 | [twosum_ii](double_ptr/twosum_ii) | [题目](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [分析](double_ptr/index.md#twosum_ii) | [solution.py](double_ptr/twosum_ii/solution.py) |
 
 ### dp
@@ -201,6 +202,9 @@ leetcode/
 │           ├── solution.py
 │           └── test_cases.txt
 ├── double_ptr/
+│   ├── container_with_most_water/
+│   │   ├── solution.py
+│   │   └── test_cases.txt
 │   └── twosum_ii/
 │       ├── solution.py
 │       └── test_cases.txt
