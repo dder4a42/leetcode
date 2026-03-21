@@ -121,10 +121,11 @@
 | [cycle_rob](dp/robs/cycle_rob) | [题目](https://leetcode.cn/problems/house-robber-ii/) | [分析](dp/robs/index.md#cycle_rob) | [solution.py](dp/robs/cycle_rob/solution.py) |
 
 ### prefix_sum
+- 目录说明：[index.md](prefix_sum/index.md)
 
 | 题目目录 | LeetCode | 本地题解 | 实现代码 |
 | --- | --- | --- | --- |
-| [subarray_sum_equals_k](prefix_sum/subarray_sum_equals_k) | 待补充 | 待补充 | [solution.py](prefix_sum/subarray_sum_equals_k/solution.py) |
+| [subarray_sum_equals_k](prefix_sum/subarray_sum_equals_k) | [题目](https://leetcode.com/problems/subarray-sum-equals-k/) | [分析](prefix_sum/index.md#subarray_sum_equals_k) | [solution.py](prefix_sum/subarray_sum_equals_k/solution.py) |
 
 ### simulation
 - 目录说明：[index.md](simulation/index.md)
